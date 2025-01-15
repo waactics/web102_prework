@@ -2,7 +2,8 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: #1B263B; /*CHALLENGE 7.3: CHANGED COLOR*/
+    color: white; /*CHALLENGE 7.3: CHANGED COLOR*/
 }
 
 #tentacles {
@@ -11,7 +12,7 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: #415A77; /*CHALLENGE 7.3: CHANGED COLOR*/
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -19,12 +20,25 @@ body {
     margin-top: -10px;
 }
 
+/*CHALLENGE 2.2 AND 2.3: ADD A CSS RULE, ADD FLEXBOX*/
 .stats-container {
     display: flex;
+    justify-content: space-around; /*horizontal*/
+    align-items: stretch; /*vertical*/
+    flex-direction: row;/*row or col*/
+}
+
+/*CHALLENGE 2.4: SET POINTER, BOX SHADOW, AND COLOR*/
+/*CHALLENGE 7.3: SPECIFIED FOR EACH CARD INSTEAD OF CONTAINER*/
+.stats-container .stats-card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px;
+    color: lightblue;
+    transform: scale(1.1) perspective(1px);
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #778DA9;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
@@ -49,7 +63,7 @@ body {
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: #415A77; /*CHALLENGE 7.3: CHANGED COLOR*/
     padding: 1%;
     margin: 1%;
     width: 300px;
@@ -60,10 +74,24 @@ body {
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+    transform: scale(1.1) perspective(1px);
 }
 
 #button-container {
     text-align: center;
+}
+
+/*CHALLENGE 7.3: SET POINTER, BOX SHADOW, AND COLOR*/
+#button-container button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px;
+    color: lightblue;
+}
+
+/*CHALLENGE 7.3: SET CUSTOMIZATIONS ON ACTIVE BUTTON*/
+#button-container button:active {
+    box-shadow: 0px 0px 30px;
+    color: #415A77;
 }
 
 button {
